@@ -1,3 +1,4 @@
+import Routes from './Router';
 import Home from './Home';
 
 
