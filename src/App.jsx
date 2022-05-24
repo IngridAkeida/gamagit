@@ -1,4 +1,4 @@
-import Routes from './Router';
+import Router from './Router';
 import Home from './Home';
 
 
