@@ -13,7 +13,7 @@ export default function Router(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Home/>} />
+                <Route path='/' exact element={<Home/>} />
                 <Route path='/repositories' element={<Repositories/>}/>
             </Routes>
         </BrowserRouter>
