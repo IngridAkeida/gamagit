@@ -5,16 +5,24 @@ function App(props) {
 
   const [usuario, setUsuario ]= useState("")
   return (
+
+    function handleSearch(){
+      console.log()
+
+    }
+
+
     <>
       {/*<p>{usuario}</p>
       <h1>{props.title}</h1>*/}
       <input 
         className='usuarioInput' 
-        placeholder='Usuário' 
-        onChange={ e => setUsuario(e.target.value)}
+        placeholder='Usuário'
+        value={usuario}
+        onChange={e => setUsuario(e.target.value)}
       />
 
-      <button type="button">Pesquisar</button>
+      <button type="button" onClick={handleSearch}>Pesquisar</button>
    
     </>
     
