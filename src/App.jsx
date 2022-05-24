@@ -1,20 +1,21 @@
 import { useState } from "react";
+import axios from "axios";
 
 
 function App(props) {
 
   const [usuario, setUsuario ]= useState("")
+
+  function handleSearch(){
+    axios.get(`https://api.github.com/users/${usuario}/repos`).then(response=> console.log(response));
+  }
+  
   return (
-
-    function handleSearch(){
-      console.log()
-
-    }
-
-
     <>
+    
       {/*<p>{usuario}</p>
       <h1>{props.title}</h1>*/}
+      
       <input 
         className='usuarioInput' 
         placeholder='Usuário'
