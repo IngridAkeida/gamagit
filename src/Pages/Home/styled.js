@@ -8,7 +8,6 @@ export const HomeContainer = styled.div`
   height: 100vh;
 `;
 
-
 export const Content = styled.div`
   width: 100vw;
   display: flex;

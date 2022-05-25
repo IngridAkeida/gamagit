@@ -4,25 +4,30 @@ import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function Home() {
+export default function Home(props) {
 
   const navigate = useNavigate();
   const [usuario, setUsuario ]= useState("");
+  const [erro, setErro ]= useState(false);
 
 
   function handleSearch(){
-    axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
-      const repositories = response.data;
-      const repositoriesName = [];
-      repositories.map((repository) => {
-        repositoriesName.push(repository.name);
+    axios.get(`https://api.github.com/users/${usuario}/repos`)
+      .then(response => {
+        const repositories = response.data;
+        const repositoriesName = [];
+        repositories.map((repository) => {
+          repositoriesName.push(repository.name);
+        });
+
+        localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+        setErro(false);
+        navigate('/repositories');
+
+      }).catch(err => {
+          setErro(true);
       });
-
-      localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
-
-      navigate('/repositories');
       
-    });
   }
   
   return (
@@ -42,6 +47,10 @@ export default function Home() {
         <S.Button type="button" onClick={handleSearch}>Pesquisar
         </S.Button>
       </S.Content>
+
+      {erro ? <S.ErrorMsg> Occoreu um erro. Tente novamente.</S.ErrorMsg> : ''}
+      
+      
     </S.HomeContainer>
     
   );
