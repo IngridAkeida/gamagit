@@ -5,8 +5,8 @@ import{
 } from 'react-router-dom';
 
 
-import Home from '.';
-import Repositories from './Repositories/Repositories';
+import Home from './Home';
+import Repositories from './Repositories';
 
 
 export default function Router(){

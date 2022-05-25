@@ -1,5 +1,5 @@
 import Router from './Router';
-import Home from '.';
+import Home from './Home';
 
 
 function App() {
