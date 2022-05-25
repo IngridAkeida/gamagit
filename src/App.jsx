@@ -1,12 +1,12 @@
-import Router from './Router';
-import Home from './Home';
+import RoutesApp from './routesApp';
+import Home from './Pages/Home';
 
 
 function App() {
 
   return (
     <>     
-      <Home/>
+      <RoutesApp/>
     </>
     
   );
