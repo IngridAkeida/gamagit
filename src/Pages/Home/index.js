@@ -20,7 +20,7 @@ export default function Home() {
 
       localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
 
-      navigate.push('/repositories');
+      navigate('/repositories');
       
     });
   }

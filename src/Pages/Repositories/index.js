@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as S from './styled';
+import { Link } from "react-router-dom";
 
 export default function Repositories(){
 
@@ -9,7 +10,7 @@ export default function Repositories(){
         let repositoriesName = localStorage.getItem('repositoriesName');
         repositoriesName = JSON.parse(repositoriesName)
         SetRepositories(repositoriesName);
-        localStorage.clear();
+        //localStorage.clear();
     },[]);
     return(
         <S.Container>
@@ -22,6 +23,7 @@ export default function Repositories(){
                     })
                 }
             </S.List>
+            <S.LinkHome to='/'> Voltar </S.LinkHome>
         </S.Container>
     )
 }
