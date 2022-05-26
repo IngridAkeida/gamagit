@@ -27,7 +27,7 @@ export const List = styled.ul`
 
 export const Img = styled.img`
   border-radius: 1.25rem;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 7px rgba(0, 0, 0, 0.2);
   width: 14.5rem;
 `;
 

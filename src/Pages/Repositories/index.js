@@ -35,6 +35,7 @@ export default function Repositories(){
             <S.SubTitle>{profile.login}</S.SubTitle>
             <S.List>
                 <S.ListItem>
+                    
                     <S.ListItemCol>
                         <S.ListItemParts>
                             <S.Img src={profileImage} alt={`${profile.name} profile`}/>
@@ -46,9 +47,10 @@ export default function Repositories(){
                             Bio: {profile.bio}.
                         </S.ListItemParts>
                     </S.ListItemCol>
+
                     <S.ListItemCol>
                         <S.ListItemParts>
-                            Repositórios Públicos: {profile.public_repos} repositórios.
+                            Repositórios Públicos: {profile.public_repos} {profile.public_repos >= 1 ? 'Repositórios':'Repositório'}.
                         </S.ListItemParts>
                         <S.ListItemParts>
                             Seguidores:{profile.followers}.
