@@ -20,7 +20,7 @@ export default function Repositories(){
             profile = JSON.parse(profile)
             setProfile(profile);
 
-            localStorage.clear();
+            //localStorage.clear();
         }else{
             navigate('/');
         }
@@ -37,7 +37,7 @@ export default function Repositories(){
                 <S.ListItem>
                     <S.ListItemCol>
                         <S.ListItemParts>
-                            <img src={profileImage} alt={`${profile.name} profile`}/>
+                            <S.Img src={profileImage} alt={`${profile.name} profile`}/>
                         </S.ListItemParts>
                         <S.ListItemParts>
                             {profile.name}

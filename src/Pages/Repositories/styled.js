@@ -25,6 +25,12 @@ export const List = styled.ul`
   margin: 0;
 `;
 
+export const Img = styled.img`
+  border-radius: 1.25rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 14.5rem;
+`;
+
 export const ListItem = styled.li`
   border-radius: .25rem;
   margin: .5rem 0;
