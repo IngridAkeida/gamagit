@@ -28,6 +28,7 @@ export default function Home(props) {
   
   return (
     <S.HomeContainer>
+      <S.Title>Buscador de Repositório</S.Title>
       <S.Content>
     
         {/*<p>{usuario}</p>
