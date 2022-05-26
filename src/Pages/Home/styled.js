@@ -12,6 +12,9 @@ export const Logo = styled.img`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 30vh;
+  background-color: #d7A152;
+  border-radius: 2rem;
 `;
 
 export const Title = styled.h1`
