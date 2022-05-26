@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import * as S from './styled';
 import { useNavigate } from 'react-router-dom';
+import GitHub from "../../image/github.png"
+
 
 
 export default function Home(props) {
@@ -28,6 +30,7 @@ export default function Home(props) {
   
   return (
     <S.HomeContainer>
+      <S.Logo src={GitHub}/>
       <S.Title>Buscador de Repositório</S.Title>
       <S.Content>
     
@@ -45,8 +48,9 @@ export default function Home(props) {
         </S.Button>
       </S.Content>
 
-      {erro ? <S.ErrorMsg> Occoreu um erro. Tente novamente.</S.ErrorMsg> : ''}
-      
+      {erro ? <S.ErrorMsg> Ocorreu um erro. Tente novamente.</S.ErrorMsg> : ''}
+
+ 
       
     </S.HomeContainer>
     

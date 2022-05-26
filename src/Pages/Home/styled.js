@@ -8,6 +8,12 @@ export const HomeContainer = styled.div`
   height: 100vh;
 `;
 
+export const Logo = styled.img`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const Title = styled.h1`
   text-align: center;
   font-size: 2rem;
