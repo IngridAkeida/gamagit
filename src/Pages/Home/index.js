@@ -44,7 +44,7 @@ export default function Home(props) {
   return (
     <S.HomeContainer>
       <S.Logo src={GitHub}/>
-      <S.Title>Buscador de Repositório</S.Title>
+      <S.Title>Buscador de Perfil</S.Title>
       <S.Content>
     
         {/*<p>{usuario}</p>

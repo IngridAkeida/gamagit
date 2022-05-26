@@ -20,9 +20,7 @@ export default function Repositories(){
             profile = JSON.parse(profile)
             setProfile(profile);
 
-            console.log(profile)
-
-            //localStorage.clear();
+            localStorage.clear();
         }else{
             navigate('/');
         }
