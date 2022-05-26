@@ -18,9 +18,9 @@ export default function Home(props) {
     axios.get(`https://api.github.com/users/${usuario}`)
       .then(profileResponse => {
         const profile = profileResponse.data;
-        console.log(profile);
+        
 
-        localStorage.setItem('repositories', JSON.stringify(profile));
+        localStorage.setItem('profile', JSON.stringify(profile));
         setErro(false);
         navigate('/repositories');
 

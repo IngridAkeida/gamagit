@@ -6,34 +6,64 @@ export default function Repositories(){
 
     const navigate = useNavigate();
     const [ repositories, setRepositories ] = useState([]);
-    const [ profile, setProfile ] = useState([]);
+    const [ profile, setProfile ] = useState({});
     
     useEffect(()=> {
         let repositories = localStorage.getItem('repositories');
-        let profile = localStorage.getItem('profile');
-        
+        let profile = localStorage.getItem('profile');     
 
         if(repositories != null){
 
             repositories = JSON.parse(repositories)
             setRepositories(repositories);
+
             profile = JSON.parse(profile)
             setProfile(profile);
-            localStorage.clear();
+
+            console.log(profile)
+
+            //localStorage.clear();
         }else{
             navigate('/');
         }
         
     },[]);
+
+    let profileImage = (`https://avatars.githubusercontent.com/u/${profile.id}?v=4`);
+
     return(
         <S.Container>
-            <S.Title>Repositorios</S.Title>
+            <S.Title>Perfil</S.Title>
+            <S.SubTitle>{profile.login}</S.SubTitle>
+            <S.List>
+                <S.ListItem>
+                    <S.ListItemCol>
+                        <S.ListItemParts>
+                            <img src={profileImage} alt={`${profile.name} profile`}/>
+                        </S.ListItemParts>
+                        <S.ListItemParts>
+                            {profile.name}
+                        </S.ListItemParts>
+                        <S.ListItemParts>
+                            Bio: {profile.bio}.
+                        </S.ListItemParts>
+                    </S.ListItemCol>
+                    <S.ListItemCol>
+                        <S.ListItemParts>
+                            Repositórios Públicos: {profile.public_repos} repositórios.
+                        </S.ListItemParts>
+                        <S.ListItemParts>
+                            Seguindores:{profile.followers}.
+                        </S.ListItemParts>
+                        <S.ListItemParts>
+                            Seguindo: {profile.following}.
+                        </S.ListItemParts>
+                    </S.ListItemCol>
+                </S.ListItem>                   
+            </S.List>
 
-            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
-            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
-            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
-            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
-
+            <S.Title>{profile.public_repos >= 1 ? 'Repositórios':'Repositório'}</S.Title>
+            
             <S.List>
                 {repositories.map((repository) => {
                     let description = repository.description;
