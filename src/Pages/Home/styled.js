@@ -14,7 +14,7 @@ export const Logo = styled.img`
   align-items: center;
   height: 30vh;
   background-color: #d7A152;
-  border-radius: 2rem;
+  border-radius: 4rem;
 `;
 
 export const Title = styled.h1`
