@@ -6,15 +6,19 @@ export default function Repositories(){
 
     const navigate = useNavigate();
     const [ repositories, setRepositories ] = useState([]);
-
-
+    const [ profile, setProfile ] = useState([]);
+    
     useEffect(()=> {
         let repositories = localStorage.getItem('repositories');
+        let profile = localStorage.getItem('profile');
+        
 
         if(repositories != null){
 
             repositories = JSON.parse(repositories)
             setRepositories(repositories);
+            profile = JSON.parse(profile)
+            setProfile(profile);
             localStorage.clear();
         }else{
             navigate('/');
@@ -24,6 +28,10 @@ export default function Repositories(){
     return(
         <S.Container>
             <S.Title>Repositorios</S.Title>
+
+            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
+            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
+            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
             <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
 
             <S.List>

@@ -14,6 +14,20 @@ export default function Home(props) {
 
 
   function handleSearch(){
+
+    axios.get(`https://api.github.com/users/${usuario}`)
+      .then(profileResponse => {
+        const profile = profileResponse.data;
+        console.log(profile);
+
+        localStorage.setItem('repositories', JSON.stringify(profile));
+        setErro(false);
+        navigate('/repositories');
+
+      }).catch(err => {
+          setErro(true);
+    });
+
     axios.get(`https://api.github.com/users/${usuario}/repos`)
       .then(response => {
         const repositories = response.data;
@@ -24,8 +38,7 @@ export default function Home(props) {
 
       }).catch(err => {
           setErro(true);
-      });
-      
+    });   
   }
   
   return (
