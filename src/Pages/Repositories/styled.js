@@ -28,6 +28,13 @@ export const ListItem = styled.li`
   padding: .5rem;
 `;
 
+export const ListItemParts = styled.p`
+  margin: .5rem 0;
+  background: #282833;
+  color: #fff;
+  padding: .5rem;
+`;
+
 export const LinkHome = styled(Link)`
   display: block;
   width: 4rem;

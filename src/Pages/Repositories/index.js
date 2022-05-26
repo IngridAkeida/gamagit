@@ -9,12 +9,12 @@ export default function Repositories(){
 
 
     useEffect(()=> {
-        let repositoriesName = localStorage.getItem('repositoriesName');
+        let repositories = localStorage.getItem('repositories');
 
-        if(repositoriesName != null){
+        if(repositories != null){
 
-            repositoriesName = JSON.parse(repositoriesName)
-            setRepositories(repositoriesName);
+            repositories = JSON.parse(repositories)
+            setRepositories(repositories);
             localStorage.clear();
         }else{
             navigate('/');
@@ -23,11 +23,15 @@ export default function Repositories(){
     },[]);
     return(
         <S.Container>
-            <S.Title> Repositorios</S.Title>
+            <S.Title>Repositorios</S.Title>
             <S.List>
-                {repositories.map(repository => {
+                {repositories.map((repository) => {
                         return(
-                            <S.ListItem>{repository}</S.ListItem>
+                            <S.ListItem key={repository.id}>
+                                <S.ListItemParts>{repository.name}</S.ListItemParts>
+                                <S.ListItemParts>{repository.description}</S.ListItemParts>
+                                <S.ListItemParts>{repository.language}</S.ListItemParts>
+                            </S.ListItem>
                         )
                     })
                 }
