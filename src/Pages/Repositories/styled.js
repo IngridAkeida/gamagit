@@ -11,7 +11,7 @@ export const Title = styled.h1`
   text-align: center;
   font-size: 2rem;
   font-family: sans-serif;
-  color: #333;
+  color: #282;
 `
 
 export const List = styled.ul`
@@ -23,16 +23,14 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   margin: .5rem 0;
-  background: #282833;
-  color: #fff;
+  background-color: #282;
   padding: .5rem;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const ListItemParts = styled.p`
-  margin: .5rem 0;
-  background: #282833;
   color: #fff;
-  padding: .5rem;
 `;
 
 export const LinkHome = styled(Link)`
