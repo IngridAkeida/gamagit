@@ -26,10 +26,13 @@ export default function Repositories(){
             <S.Title>Repositorios</S.Title>
             <S.List>
                 {repositories.map((repository) => {
+                    let description = repository.description;
                         return(
                             <S.ListItem key={repository.id}>
                                 <S.ListItemParts>{repository.name}</S.ListItemParts>
-                                <S.ListItemParts>{repository.description}</S.ListItemParts>
+                                <S.ListItemParts>
+                                    {description ? description :'Sem descricao'}
+                                </S.ListItemParts>
                                 <S.ListItemParts>{repository.language}</S.ListItemParts>
                             </S.ListItem>
                         )
