@@ -10,27 +10,39 @@ export const Container = styled.div`
 export const Title = styled.h1`
   text-align: center;
   font-size: 2rem;
-  font-family: sans-serif;
-  color: #282;
+  color: #d7A152;
+`
+
+export const SubTitle = styled.h3`
+  text-align: center;
+  font-size: 1.5rem;
+  color: #d7A152;
 `
 
 export const List = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
 `;
 
 export const ListItem = styled.li`
+  border-radius: .25rem;
   margin: .5rem 0;
-  background-color: #282;
+  background-color: #d7A152;
   padding: .5rem;
   display: flex;
   justify-content: space-between;
 `;
 
+export const ListItemCol = styled.div`
+  
+
+`;
+
 export const ListItemParts = styled.p`
-  color: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 0 .5rem;
 `;
 
 export const LinkHome = styled(Link)`
@@ -38,8 +50,8 @@ export const LinkHome = styled(Link)`
   width: 4rem;
   text-align: center;
   margin: 2rem auto;
-  background-color: #282833;
-  padding: .5rem 0;
+  background-color: #121416;
+  padding: 0.5rem;
   color: #fff;
   text-decoration: none;
   border-radius: .25rem;

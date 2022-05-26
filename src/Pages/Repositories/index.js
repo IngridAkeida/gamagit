@@ -24,19 +24,27 @@ export default function Repositories(){
     return(
         <S.Container>
             <S.Title>Repositorios</S.Title>
+            <S.SubTitle>Aqui ficará o nickName</S.SubTitle>
+
             <S.List>
                 {repositories.map((repository) => {
                     let description = repository.description;
                     let language = repository.language;
                         return(
                             <S.ListItem key={repository.id}>
-                                <S.ListItemParts>{repository.name}</S.ListItemParts>
-                                <S.ListItemParts>
-                                    {description ? description :'Sem descrição'}
-                                </S.ListItemParts>
-                                <S.ListItemParts>
-                                    {language ? language :'Sem linguagem definida'}
-                                </S.ListItemParts>
+                                <S.ListItemCol>
+                                    <S.ListItemParts>
+                                        {repository.name}
+                                    </S.ListItemParts>
+                                    <S.ListItemParts>
+                                        {language ? language :'Sem linguagem definida'}
+                                    </S.ListItemParts>
+                                </S.ListItemCol>
+                                <S.ListItemCol>
+                                    <S.ListItemParts>
+                                        {description ? description :'Sem descrição'}
+                                    </S.ListItemParts>
+                                </S.ListItemCol>
                             </S.ListItem>
                         )
                     })
