@@ -51,7 +51,7 @@ export default function Repositories(){
                             Repositórios Públicos: {profile.public_repos} repositórios.
                         </S.ListItemParts>
                         <S.ListItemParts>
-                            Seguindores:{profile.followers}.
+                            Seguidores:{profile.followers}.
                         </S.ListItemParts>
                         <S.ListItemParts>
                             Seguindo: {profile.following}.
